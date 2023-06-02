@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>sendAmount</title>
+    </head>
+    <script>
+        let amount = 100;
+        let sendAmount;
+        var environment = 'prod'
+        switch (environment){
+            case 'dev':
+                sendAmount=amount+0.1*amount;
+                break;
+            case 'test':
+                sendAmount=amount+0.2*amount;
+                break;
+            case 'stage':
+                sendAmount=amount+0.3*amount;
+                break;
+            case 'prod':
+                sendAmount=amount+0.05*amount;
+                break;
+        }
+      console.log(sendAmount)
+        
+    </script>
+</html>
