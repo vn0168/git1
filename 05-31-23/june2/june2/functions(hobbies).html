@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <body>
+            <script>
+                let hobbies = ["Cooking", "Stockmarket", "Movies"];
+
+function displayHobbies() {
+  console.log(hobbies);
+  
+}
+
+function addHobby(newHobby) {
+  hobbies.push(newHobby);
+  console.log("New hobby added:", newHobby);
+  displayHobbies();
+}
+
+function deleteHobby(hobbyToDelete) {
+  const index = hobbies.indexOf(hobbyToDelete);
+  if (index !== -1) {
+    hobbies.splice(index, 1);
+    console.log("Hobby deleted:", hobbyToDelete);
+    displayHobbies();
+  } else {
+    console.log("Hobby not found:", hobbyToDelete);
+  }
+}
+
+
+displayHobbies(); 
+addHobby("Netsurfing"); 
+deleteHobby("Movies"); 
+deleteHobby("Swimming"); 
+console.log(hobbies);
+            </script>
+        </body>
+    </head>
+</html>
