@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <title>Sushmita Simmala profile</title>
+</head>
+<body>
+    <form id="form_myprofile">
+    <p>Firstname:<input  type="text"  id="Firstname"/></p>
+    <p>Lastname:<input  type="text"  id="Lastname"/></p>
+    <p>Gender:<input type="radio" name="gender" value="male"/>Male
+            <input type="radio" name="gender" value="female"/>Female
+    </p>
+    <p>Hobbies:<input type="checkbox" name="hobby" value="Basketball">Basketball
+        <input type="checkbox" name="hobby" value="Badminton">Badminton
+        <input type="checkbox" name="hobby" value="Cricket">Cricket</br>
+        <input type="checkbox" name="hobby" value="Singing">Singing
+        <input type="checkbox" name="hobby" value="Designing">Designing
+        <input type="checkbox" name="hobby" value="Cooking">Cooking</br>
+        <input type="checkbox" name="hobby" value="Quill-Art">Quill Art
+        <input type="checkbox" name="hobby" value="Handmade-cards">Handmade cards
+        <input type="checkbox" name="hobby" value="DIYs">DIY's
+    </p>
+    <p>Phone:<input  type="text"  id="Phone"/></p>
+    <p>Email-id:<input  type="text" id="Email"/></p>
+    <p>Date:<input type="date" id="Date"></p>
+    <p>Country:<input  type="text" id="Country"/></p>
+    <p><button type="button" onclick="senddata()" >SUBMIT</button></p>
+    <p span id="d1"></p>
+    <p span id="d2"></p>
+    <p span id="d3"></p>
+    <p span id="d4"></p>
+    <p span id="d5"></p>
+    <p span id="d6"></p>
+    <p span id="d7"></p>
+    <p span id="d8"></p>
+    
+
+        
+    </div>
+    </form>
+
+    <script>
+      function senddata(){
+                
+                // const gen=document.getElementsByName("gender");
+                // const hob=document.getElementsByName("hobby");
+                const fn= document.getElementById("Firstname").value;
+                const ln= document.getElementById("Lastname").value;
+                const gen=document.getElementsByName("gender");
+                const hob=document.getElementsByName("hobby");
+                const ph= document.getElementById("Phone").value;
+                const em= document.getElementById("Email").value;
+                const dt= document.getElementById("Date").value;
+                const ctry= document.getElementById("Country").value;
+
+
+                    document.getElementById("d1").innerHTML=fn;
+    
+                    document.getElementById("d2").innerHTML=ln;
+                
+                //code for displaying selected radio button values
+                
+                for(i=0;i<gen.length;i++)
+                {
+                    if(gen[i].checked)
+                    {
+                        document.getElementById("d3").innerHTML=""+gen[i].value;
+                    }
+                }
+
+                //code for displaying checked boxes values
+                
+                let hobresult = "";
+                for (let i=0; i<hob.length;i++)
+                {
+                    if(hob[i].checked)
+                    {
+                        hobresult+=hob[i].value+"   ";
+                    }
+                }
+
+                document.getElementById("d4").innerHTML=hobresult;
+
+                document.getElementById("d5").innerHTML=ph;
+                document.getElementById("d6").innerHTML=em;
+                document.getElementById("d7").innerHTML=dt;
+                document.getElementById("d8").innerHTML=ctry;
+                
+            }
+
+    </script>
+</body>
+</html>
